@@ -1,0 +1,25 @@
+<launch>
+
+  <include file="$(find pr2_teleop)/teleop_joystick.launch"/>
+
+  <include file="$(find billiards_launch)/localization_navigation.launch"/>
+
+  <include file="$(find billiards_launch)/arms.launch"/>
+
+  <include file="$(find billiards_launch)/prosilica.launch"/>
+
+  <include file="$(find billiards_launch)/ball_detector.launch"/>
+
+  <!--include file="$(find billiards_checkerboard)/detector.launch"/-->
+
+  <include file="$(find billiards_planner)/launch/mc_planner.launch"/>
+
+  <!--include file="$(find billiards_planner)/launch/simple_shot_planner.launch"/-->
+
+  <node pkg="billiards_executive" type="posestamped_to_tf" name="posestamped_to_tf"/>
+
+  <node name="camera_synchronizer_dynparam" pkg="dynamic_reconfigure" type="dynparam" args="set /camera_synchronizer_node &quot;{ 'projector_mode': 2, 'narrow_stereo_trig_mode': 5 }&quot;" />
+  <node name="narrow_stereo_left_dynparam" pkg="dynamic_reconfigure" type="dynparam" args="set /narrow_stereo_left &quot;{ 'auto_gain': False, 'auto_exposure': False,'auto_exposure_alternate': False  }&quot;" />
+  <node name="narrow_stereo_right_dynparam" pkg="dynamic_reconfigure" type="dynparam" args="set /narrow_stereo_right &quot;{ 'auto_gain': False, 'auto_exposure': False,'auto_exposure_alternate': False  }&quot;" />
+
+</launch>

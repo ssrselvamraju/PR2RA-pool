@@ -1,0 +1,215 @@
+10
+
+dir
+55296
+https://code.ros.org/svn/wg-ros-pkg/graveyard/billiards
+https://code.ros.org/svn/wg-ros-pkg
+
+
+
+2011-10-28T18:57:17.007185Z
+53311
+kwc
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+7275ad9f-c29b-430a-bdc5-66f4b3af1622
+
+billiards_planner
+dir
+
+billiards_navigation
+dir
+
+billiards_vis
+dir
+
+billiards_executive
+dir
+
+billiards_recorder
+dir
+
+billiards_rviz_plugin
+dir
+
+rosdep.yaml
+file
+
+
+
+
+2013-02-17T03:25:18.000000Z
+9fe1828910ca15c3419ec983c62c19f2
+2010-06-07T22:42:39.497571Z
+37997
+jfaust
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+30
+
+billiards_msgs
+dir
+
+billiards_launch
+dir
+
+fastfiz_msgs
+dir
+
+pr2_billiards_sim
+dir
+
+billiards_checkerboard
+dir
+
+billiard_object_detector
+dir
+
+stack.xml
+file
+
+
+
+
+2013-02-17T03:25:18.000000Z
+404a624a03b4589928f8acfcaf415272
+2010-06-09T23:20:20.911601Z
+38291
+tfield
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+357
+
+billiard_ball_detector
+dir
+
+billiards_control
+dir
+
+fastfiz
+dir
+
+billiards_table
+dir
+
+Makefile
+file
+
+
+
+
+2013-02-17T03:25:18.000000Z
+23f47450e4334db0c1d15023d7b9bd6a
+2010-06-07T19:20:32.141118Z
+37952
+jfaust
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+47
+
+CMakeLists.txt
+file
+
+
+
+
+2013-02-17T03:25:18.000000Z
+71c3b477f8d1d54696cd8dfda83b17d4
+2010-06-07T19:20:32.141118Z
+37952
+jfaust
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+815
+
+cvblobslib
+dir
+

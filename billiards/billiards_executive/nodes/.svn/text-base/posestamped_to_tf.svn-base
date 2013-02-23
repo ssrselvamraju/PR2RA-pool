@@ -1,0 +1,94 @@
+#!/usr/bin/env python
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+import roslib; roslib.load_manifest('billiards_executive')
+import rospy
+import actionlib
+import tf
+import threading
+import time
+
+from geometry_msgs.msg import PoseStamped
+from billiards_msgs.msg import PoseStampedToTFAction
+
+class PoseStampedToTFServer:
+    def __init__(self, args):
+        self.tf_broadcaster = tf.TransformBroadcaster()
+        self.tf_lock = threading.Lock()
+
+        self.valid = False
+        self.translation = None
+        self.rotation = None
+        self.time = None
+        self.parent = None
+        self.child = None
+
+        self.tf_thread = threading.Thread(target=self.publish_tf)
+        self.tf_thread.start()
+
+        self.server = actionlib.SimpleActionServer('posestamped_to_tf', PoseStampedToTFAction, self.execute)
+
+    def publish_tf(self):
+        while not rospy.is_shutdown():
+            self.tf_lock.acquire()
+            if self.valid:
+                self.tf_broadcaster.sendTransform(self.translation, self.rotation,
+                                                  rospy.Time.now(), self.child,
+                                                  self.parent)
+            self.tf_lock.release()
+            time.sleep(0.1)
+        
+    def execute(self, goal):
+        print 'execute: received goal: ' + `goal`
+
+        self.tf_lock.acquire()
+        self.translation = (goal.pose.pose.position.x,
+                            goal.pose.pose.position.y,
+                            goal.pose.pose.position.z)
+        self.rotation = (goal.pose.pose.orientation.x,
+                         goal.pose.pose.orientation.y,
+                         goal.pose.pose.orientation.z,
+                         goal.pose.pose.orientation.w)
+        self.time = goal.pose.header.stamp 
+        self.parent = goal.pose.header.frame_id 
+        self.child = goal.child_frame
+        self.valid = True
+        self.tf_lock.release()
+
+        self.server.set_succeeded()
+
+
+if __name__ == '__main__':
+    rospy.init_node('posestamped_to_tf')
+    server = PoseStampedToTFServer(rospy.myargv())
+    rospy.spin()

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf
+END
+pr2.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf/pr2.urdf.xacro
+END
+table.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf/table.urdf.xacro
+END
+ball_0.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf/ball_0.urdf.xacro
+END
+ball_1.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf/ball_1.urdf.xacro
+END
+balls.urdf.xacro
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/urdf/balls.urdf.xacro
+END

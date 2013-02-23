@@ -1,0 +1,30 @@
+<package>
+  <description brief="billiard_ball_detector">
+
+     billiard_ball_detector
+
+  </description>
+  <author>Patrick Mihelich</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiard_ball_detector</url>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lbilliard_ball_detector" />
+  </export>
+
+  <depend package="roscpp"/>
+  <depend package="opencv2"/>
+  <depend package="image_transport"/>
+  <depend package="image_geometry"/>
+  <depend package="cv_bridge"/>
+  <depend package="cvblobslib"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="tf"/>
+  <depend package="billiards_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="camera_calibration_parsers"/>
+  <depend package="actionlib"/>
+  <depend package="camera_info_manager"/>
+
+</package>

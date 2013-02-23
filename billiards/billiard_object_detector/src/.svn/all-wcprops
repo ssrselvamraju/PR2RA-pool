@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src
+END
+ping_tabletop_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/ping_tabletop_node.cpp
+END
+model_fitter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/model_fitter.cpp
+END
+tabletop_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/tabletop_node.cpp
+END
+mesh_loader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/mesh_loader.cpp
+END
+iterative_distance_fitter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/iterative_distance_fitter.cpp
+END
+ply.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/ply.c
+END
+billiard_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/billiard_node.cpp
+END
+marker_generator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/marker_generator.cpp
+END
+tabletop_clustering.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/src/tabletop_clustering.cpp
+END

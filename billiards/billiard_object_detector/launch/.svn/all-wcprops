@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/launch
+END
+tabletop_node_machine2.launch
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/launch/tabletop_node_machine2.launch
+END
+billiard_node.launch
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/launch/billiard_node.launch
+END
+tabletop_node.launch
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/launch/tabletop_node.launch
+END

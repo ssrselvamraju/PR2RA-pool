@@ -1,0 +1,125 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="pcl_manager_X" args="manager" output="screen" /> 
+
+  <!-- Downsample the data -->
+  <node pkg="nodelet" type="nodelet" name="voxel_grid_X" args="load pcl/VoxelGrid pcl_manager_X" output="screen">
+    <remap from="/voxel_grid_X/input" to="/narrow_stereo_textured/points2" />
+    <rosparam>
+     # -[ Mandatory parameters
+     leaf_size: 0.015
+     #leaf_size: [0.015, 0.015, 0.015]
+     # -[ Optional parameters
+     filter_field_name: "z"  # The field name that holds distance values (for filtering)
+     filter_limit_min: 0.8   # points closer than 0.8m from the viewpoint will not be considered
+     filter_limit_max: 3.0   # points closer than 5.0m from the viewpoint will not be considered
+     use_indices: false      # false by default
+    </rosparam>
+  </node>
+
+  <!-- Estimate point normals -->
+  <node pkg="nodelet" type="nodelet" name="normal_estimation_X" args="load pcl/NormalEstimation pcl_manager_X" output="screen">
+    <remap from="/normal_estimation_X/input"   to="/voxel_grid_X/output" />
+    <rosparam>
+      # -[ Mandatory parameters
+      # Set either 'k_search' or 'radius_search'
+      k_search: 0
+      radius_search: 0.05
+      # Set the spatial locator. Possible values are: 0 (ANN), 1 (FLANN), 2 (organized)
+      spatial_locator: 0
+
+    </rosparam>
+  </node>
+
+  <!-- Segment the table plane -->
+  <node pkg="nodelet" type="nodelet" name="segmentation_normals_X" args="load pcl/SACSegmentationFromNormals pcl_manager_X" output="screen">-->
+    <remap from="/segmentation_normals_X/input"   to="/voxel_grid_X/output" />
+    <remap from="/segmentation_normals_X/normals" to="/normal_estimation_X/output" />
+    <rosparam>
+      # -[ Mandatory parameters
+      # The type of the model that is to be segmented. Possible values are:
+      # 5 (Cylinder), 11 (Plane with normals constraints)
+      model_type: 11
+      # Maximum allowed distance threshold to the model
+      model_threshold: 0.1
+
+      # -[ Optional parameters
+      use_indices: false    # false by default
+      # The type of the Sample Consensus method to use. Possible values are:
+      #  0 (RANSAC, default), 1 (LMedS), 2 (MSAC), 3 (RRANSAC), 4 (RMSAC), 5 (MLESAC)
+      method_type: 0
+      # Refine coefficients?
+      optimize_coefficients : true
+
+      # Specific SACSegmentationFromNormals parameters
+      normal_distance_weight: 0.05
+   </rosparam>
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="project_inliers_X" args="load pcl/ProjectInliers pcl_manager_X" output="screen">
+    <remap from="/project_inliers_X/input"   to="/voxel_grid_X/output" />
+    <remap from="/project_inliers_X/inliers" to="/segmentation_normals_X/inliers" />
+    <remap from="/project_inliers_X/model"   to="/segmentation_normals_X/model" />
+    <rosparam>
+      model_type: 11
+      copy_all_data: false
+      copy_all_fields: true
+    </rosparam>
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="extract_indices_X" args="load pcl/ExtractIndices pcl_manager_X" output="screen">
+    <remap from="/extract_indices_X/input"   to="/voxel_grid_X/output" />
+    <remap from="/extract_indices_X/indices" to="/segmentation_normals_X/inliers" />
+    <rosparam>
+      negative: true
+    </rosparam>
+  </node>
+  
+
+  <!-- Cluster the remaining points (all-plane) -->
+  <node pkg="nodelet" type="nodelet" name="extract_object_clusters_X" args="load pcl/EuclideanClusterExtraction pcl_manager_X" output="screen">
+    <remap from="extract_object_clusters_X/input" to="/extract_indices_X/output" />
+    <rosparam>
+      max_queue_size: 20
+      cluster_tolerance: 0.04
+      spatial_locator: 0
+      cluster_min_size: 20
+    </rosparam>
+  </node>
+  
+  <!-- Segment the balls -->
+  <node pkg="nodelet" type="nodelet" name="ball_segmentation_X" args="load pcl/SACSegmentation pcl_manager_X" output="screen">
+    <remap from="/ball_segmentation_X/input"   to="/extract_object_clusters_X/output" />
+    <rosparam>
+      # -[ Mandatory parameters
+      # The type of the model that is to be segmented. Possible values are:
+      # 4 (Sphere)
+      model_type: 4
+      # Maximum allowed distance threshold to the model
+      model_threshold: 0.05
+
+      max_queue_size: 20
+
+      # -[ Optional parameters
+      use_indices: false    # false by default
+      # The type of the Sample Consensus method to use. Possible values are:
+      #  0 (RANSAC, default), 1 (LMedS), 2 (MSAC), 3 (RRANSAC), 4 (RMSAC), 5 (MLESAC)
+      method_type: 0
+      # Refine coefficients?
+      optimize_coefficients : true
+
+   </rosparam>
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="extract_ball_indices_X" args="load pcl/ExtractIndices pcl_manager_X" output="screen">
+    <remap from="/extract_ball_indices_X/input"   to="/extract_object_clusters_X/output" />
+    <remap from="/extract_ball_indices_X/indices" to="/ball_segmentation_X/inliers" />
+    <rosparam>
+      max_queue_size: 20
+      negative: false
+    </rosparam>
+  </node>
+  
+
+
+</launch>
+

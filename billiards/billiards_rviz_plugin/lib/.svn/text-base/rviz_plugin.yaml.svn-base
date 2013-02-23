@@ -1,0 +1,8 @@
+name: Billiards
+library: billiards_rviz_plugin
+displays:
+  - 
+    class_name: billiards_rviz_plugin::BilliardsDummyDisplay
+    display_name: BilliardsDummy
+    description: |
+      dummy

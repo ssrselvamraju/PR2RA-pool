@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts
+END
+test_localize.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts/test_localize.py
+END
+table_score.py
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts/table_score.py
+END
+table_detector_gui.py
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts/table_detector_gui.py
+END
+test_score.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts/test_score.py
+END
+table_detector.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_table/scripts/table_detector.py
+END

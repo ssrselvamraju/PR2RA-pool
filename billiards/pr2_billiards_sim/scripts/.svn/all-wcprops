@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/scripts
+END
+raise_torso.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/scripts/raise_torso.py
+END
+wait_spawn.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/scripts/wait_spawn.py
+END

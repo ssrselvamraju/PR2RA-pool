@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts
+END
+test_pose_stamped_to_tf.py
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts/test_pose_stamped_to_tf.py
+END
+play_toplevel.py
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts/play_toplevel.py
+END
+take_one_shot.py
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts/take_one_shot.py
+END
+play_fixed.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts/play_fixed.py
+END
+play.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_executive/scripts/play.py
+END

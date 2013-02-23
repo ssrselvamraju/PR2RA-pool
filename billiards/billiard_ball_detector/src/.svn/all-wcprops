@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src
+END
+ball_pose_project.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src/ball_pose_project.cpp
+END
+static_image_publisher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src/static_image_publisher.cpp
+END
+ball_detector_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src/ball_detector_node.cpp
+END
+blob_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src/blob_utils.cpp
+END
+thresholder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_ball_detector/src/thresholder.cpp
+END

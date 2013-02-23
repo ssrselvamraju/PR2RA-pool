@@ -1,0 +1,35 @@
+#! /usr/bin/env python
+
+PACKAGE='billiard_ball_detector'
+import roslib; roslib.load_manifest(PACKAGE)
+
+from dynamic_reconfigure.parameter_generator import *
+
+gen = ParameterGenerator()
+
+# Smoothing parameters
+# TODO
+
+# Thresholding parameters for binarizing the source image
+gen.add("threshold_saturation_min", int_t, 0, "Minimum color saturation", 70, 0, 255)
+gen.add("threshold_value_min", int_t, 0, "Minimum value of a white ball surface", 230, 200, 255)
+#gen.add("threshold_hue_min", int_t, 0, "Minimum hue of the table", 155, 0, 180)
+#gen.add("threshold_hue_max", int_t, 0, "Maximum hue of the table", 165, 0, 180)
+
+# Blob filtering parameters
+gen.add("blob_area_absolute_min", int_t, 0, "Minimum blob area", 1000, 10, 40000)
+gen.add("blob_area_absolute_max", int_t, 0, "Maximum blob area", 40000, 10, 60000)
+gen.add("blob_area_expected_tolerance", int_t, 0, "Blob must be within X% of the expected area", 15, 0, 100)
+gen.add("blob_compactness", double_t, 0, "Maximum compactness score", 2.5, 1.0, 30.0)
+
+# Plane of the table
+gen.add("use_table_frame", bool_t, 0, "Use /table, otherwise /base_footprint", False)
+gen.add("filter_on_table_frame", bool_t, 0, "Given accurate table frame, reject blobs outside the table", False)
+
+# Thresholds for classifying balls
+gen.add("low_saturation_threshold", int_t, 0, "For identifying cue ball and ignoring low-saturation hues", 100, 0, 255)
+gen.add("red_yellow_hue_threshold", int_t, 0, "Separates red from yellow", 25, 0, 180)
+
+gen.add("use_width_as_height", bool_t, 0, "Try to correct uncertainty in blob height due to shadowing", True)
+
+exit(gen.generate(PACKAGE, "BlobDetector", "BlobDetector"))

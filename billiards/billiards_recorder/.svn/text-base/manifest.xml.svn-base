@@ -1,0 +1,17 @@
+<package>
+  <description brief="billiards_recorder">
+
+     billiards_recorder
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_recorder</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="rosbag"/>
+
+</package>
+
+

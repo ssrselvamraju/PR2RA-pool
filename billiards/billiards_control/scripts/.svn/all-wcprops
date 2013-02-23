@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts
+END
+swing_arms_action.py
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts/swing_arms_action.py
+END
+place_bridge_action.py
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts/place_bridge_action.py
+END
+strike_action.py
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts/strike_action.py
+END
+arm.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts/arm.py
+END
+place_bridge_correcting.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/scripts/place_bridge_correcting.py
+END

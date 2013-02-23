@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_vis/scripts
+END
+test_shot_plan.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_vis/scripts/test_shot_plan.py
+END
+shot_plan_to_markers.py
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_vis/scripts/shot_plan_to_markers.py
+END
+table_to_markers.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_vis/scripts/table_to_markers.py
+END

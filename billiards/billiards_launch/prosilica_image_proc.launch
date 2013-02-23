@@ -1,0 +1,7 @@
+<launch>
+  <!-- Start image_proc inside camera namespace-->
+  <group ns="prosilica">
+    <node name="image_proc" pkg="image_proc" type="image_proc" />
+  </group>
+  <node name="prosilica_streaming_dynparam" pkg="dynamic_reconfigure" type="dynparam" args="set /prosilica_driver &quot;{ 'trigger_mode': 'streaming', 'auto_exposure': False, 'exposure': 0.5, 'auto_gain': False, 'gain': 0 }&quot;" />
+</launch>

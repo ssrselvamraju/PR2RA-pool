@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/test
+END
+test_play.py
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/test/test_play.py
+END
+test_swing_arms.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/test/test_swing_arms.py
+END
+test_place_bridge.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/test/test_place_bridge.py
+END
+test_strike.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/test/test_strike.py
+END

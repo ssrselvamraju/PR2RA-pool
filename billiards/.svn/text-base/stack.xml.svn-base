@@ -1,0 +1,8 @@
+<stack>
+  <description brief="billiards">billiards</description>
+  <author>Maintained by Eric Berger, Josh Faust, Tim Field, Tully Foote, Brian Gerkey, Stu Glaser, John Hsu, Patrick Milhelich, Aki Oyama</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards</url>
+  <depend stack="ros" />
+</stack>

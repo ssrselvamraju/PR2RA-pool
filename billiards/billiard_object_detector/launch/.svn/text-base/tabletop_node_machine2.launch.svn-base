@@ -1,0 +1,38 @@
+<launch>
+    <node pkg="tabletop_object_detector" name="tabletop_node" type="tabletop_node" respawn="false" output="screen" machine="c2">
+
+        <param name="template_path"  value="$(find tabletop_object_detector)/meshes" />
+
+        <param name="use_point_cloud2" value="true" />
+        <param name="continuous_operation" value="false" />
+
+	<!-- what should be published during continuous operation -->
+        <param name="publish_clusters" value="true" />
+        <param name="publish_models" value="true" />
+
+	<param name="perform_fit_merge" value="true" />
+	<param name="fit_merge_threshold" value="0.05" />
+
+        <param name="database_host" value="wgs36" />
+        <param name="database_port" value="5432" />
+        <param name="database_user" value="willow" />
+        <param name="database_pass" value="willow" />
+        <param name="database_name" value="models" />
+
+	<!-- for debug, we can use a smaller set of objects to make loading faster -->
+        <param name="reduced_model_set" value="false" />
+
+        <param name="publish_table_marker" value="true" />
+        <param name="publish_cluster_markers" value="true" />
+        <param name="publish_good_fit_markers" value="true" />
+        <param name="publish_bad_fit_markers" value="false" />
+        <param name="publish_grasp_point_markers" value="false" />
+
+        <remap from="cloud_old_in" to="narrow_stereo_textured/points" />
+        <remap from="cloud_new_in" to="narrow_stereo_textured/points2" />
+
+        <remap from="markers_out" to="tabletop_detector_markers" />
+        <remap from="model_pose_out" to="tabletop_detector_models" />
+    </node>
+</launch>
+

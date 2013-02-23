@@ -1,0 +1,13 @@
+<launch>
+  <!-- Pool physics simulator -->
+  <!--<node name="fastfiz" pkg="fastfiz" type="fastfiz_node" output="screen" />-->
+
+  <!-- plan_shot action server -->
+  <node name="simple_shot_planner" pkg="billiards_planner" type="simple_shot_planner" output="screen" />
+
+  <!-- SMACH -->
+  <node name="play_fixed_simple_shot" pkg="billiards_planner" type="play_fixed.py" output="screen" />
+
+  <!-- SMACH plan executor -->
+  <node name="test_play" pkg="billiards_control" type="test_play.py" output="screen" />
+</launch>

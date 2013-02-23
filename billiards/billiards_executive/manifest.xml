@@ -1,0 +1,21 @@
+<package>
+  <description brief="billiards_executive">
+
+     billiards_executive
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_executive</url>
+  <depend package="smach"/>
+  <depend package="billiards_msgs"/>
+  <depend package="billiards_navigation"/>
+  <depend package="move_base_msgs"/>
+  <depend package="rospy"/>
+  <depend package="tf" />
+  <depend package="tf_conversions" />
+
+</package>
+
+

@@ -1,0 +1,24 @@
+<package>
+  <description brief="billiards_table">
+
+     billiards_table
+
+  </description>
+  <author>Tim Field</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_table</url>
+  <depend package="rospy"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="actionlib"/>
+  <depend package="image_geometry"/>
+  <depend package="message_filters"/>
+  <depend package="sensor_msgs"/>
+  <depend package="stereo_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="tf"/>
+  <depend package="rxbag_plugins"/>
+  <depend package="visualization_msgs"/>
+  <depend package="billiards_msgs"/>
+</package>

@@ -1,0 +1,6 @@
+<launch>
+  <param name="ball_0_description" command="$(find xacro)/xacro.py '$(find pr2_billiards_sim)/urdf/ball_0.urdf.xacro'" />
+  <node name="spawn_ball_0" pkg="pr2_billiards_sim" type="wait_spawn.py" args="ball_0_description pool_ball_0 ball0 pool_table/pool_table_pose_ground_truth 1.5 0.0 0.78 0 0 0" respawn="false" output="screen" />
+  <param name="ball_1_description" command="$(find xacro)/xacro.py '$(find pr2_billiards_sim)/urdf/ball_1.urdf.xacro'" />
+  <node name="spawn_ball_1" pkg="pr2_billiards_sim" type="wait_spawn.py" args="ball_1_description pool_ball_1 ball1 pool_table/pool_table_pose_ground_truth 1.8 0.03 0.78 0 0 0" respawn="false" output="screen" />
+</launch>

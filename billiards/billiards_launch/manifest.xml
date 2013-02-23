@@ -1,0 +1,16 @@
+<package>
+  <description brief="billiards_launch">
+
+     billiards_launch
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_launch</url>
+
+  <depend package="camera_offsetter"/>
+
+</package>
+
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/Makefile
+END
+notes.x
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/notes.x
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/manifest.xml
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/pr2_billiards_sim/mainpage.dox
+END

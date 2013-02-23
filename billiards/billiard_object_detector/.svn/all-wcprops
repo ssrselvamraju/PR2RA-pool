@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/mainpage.dox
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/Makefile
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiard_object_detector/manifest.xml
+END

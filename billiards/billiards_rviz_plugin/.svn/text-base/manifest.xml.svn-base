@@ -1,0 +1,23 @@
+<package>
+  <description brief="billiards_rviz_plugin">
+
+     billiards_rviz_plugin
+
+  </description>
+  <author>Josh Faust</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_rviz_plugin</url>
+  <depend package="rviz"/>
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="billiards_msgs"/>
+  <depend package="actionlib"/>
+
+  <export>
+  	<rviz plugin="${prefix}/lib/rviz_plugin.yaml"/>
+  </export>
+
+</package>
+
+

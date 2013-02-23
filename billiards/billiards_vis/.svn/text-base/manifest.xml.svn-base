@@ -1,0 +1,17 @@
+<package>
+  <description brief="billiards_vis">
+
+     billiards_vis
+
+  </description>
+  <author>Josh Faust</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_vis</url>
+  <depend package="roscpp"/>
+  <depend package="visualization_msgs"/>
+  <depend package="billiards_msgs"/>
+
+</package>
+
+

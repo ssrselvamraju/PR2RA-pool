@@ -1,0 +1,1 @@
+{'threshold_saturation_min': 170, 'low_saturation_threshold': 140, 'blob_area_expected_tolerance': 70, 'blob_compactness': 8.0, 'use_table_frame': True, 'blob_area_absolute_min': 1000, 'use_width_as_height': True, 'threshold_value_min': 200, 'filter_on_table_frame': True, 'blob_area_absolute_max': 40000, 'red_yellow_hue_threshold': 9}

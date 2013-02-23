@@ -1,0 +1,18 @@
+<package>
+  <description brief="billiards_checkerboard">
+
+     billiards_checkerboard
+
+  </description>
+  <author>Tully Foote</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/billiards_checkerboard</url>
+  <depend package="billiards_msgs"/>
+  <depend package="actionlib"/>
+  <depend package="tf"/>
+  <depend package="tf_conversions"/>
+  <depend package="checkerboard_pose"/>
+</package>
+
+

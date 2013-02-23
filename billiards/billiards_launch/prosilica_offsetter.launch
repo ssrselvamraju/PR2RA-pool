@@ -1,0 +1,13 @@
+<launch>
+  <group ns="prosilica">
+    <node type="prosilica_offsetter" pkg="camera_offsetter" name="prosilica_offsetter" output="screen">
+      <remap from="~virtual_twist" to="keyboard_twist" />
+      <remap from="camera" to="/prosilica" />
+      <param name="cam_name" type="string" value="/prosilica" />
+      <param name="position_scaling" type="double" value=".0001" />
+      <param name="angular_scaling"  type="double" value="1.0" />
+      <param name="camera" type="string" value="/prosilica" />
+      <param name="config_file" type="string" value="$(find billiards_launch)/$(env ROBOT).prosilica.offset" />
+    </node>
+   </group>
+</launch>

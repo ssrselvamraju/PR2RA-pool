@@ -1,0 +1,19 @@
+<launch>
+
+  <!--
+  <node name="place_bridge_action"
+        pkg="billiards_control" type="place_bridge_action.py" />
+  -->
+  
+  <node name="strike_action"
+        pkg="billiards_control" type="strike_action.py" />
+  <!--
+  <node name="strike_action"
+        pkg="billiards_executive" type="mock_strike_action.py" />
+  -->
+  
+  
+  <include file="$(find pr2_arm_kinematics)/launch/pr2_ik_larm_node.launch" />
+  <include file="$(find pr2_arm_kinematics)/launch/pr2_ik_rarm_node.launch" />
+  
+</launch>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_rviz_plugin
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_rviz_plugin/manifest.xml
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_rviz_plugin/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_rviz_plugin/Makefile
+END

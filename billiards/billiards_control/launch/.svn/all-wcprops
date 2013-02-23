@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/launch
+END
+ik_services.launch
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/launch/ik_services.launch
+END
+control_actions.launch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/billiards_control/launch/control_actions.launch
+END

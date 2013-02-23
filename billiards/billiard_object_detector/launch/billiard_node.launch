@@ -1,0 +1,30 @@
+<launch>
+    <node pkg="billiard_object_detector" name="billiard_table_estimator" type="billiard_node" respawn="false" output="screen">
+
+        <param name="template_path"  value="$(find billiard_object_detector)/ball_model" />
+
+        <param name="use_point_cloud2" value="true" />
+        <param name="continuous_operation" value="true" />
+
+	<!-- what should be published during continuous operation -->
+        <param name="publish_clusters" value="true" />
+        <param name="publish_models" value="true" />
+
+	<param name="perform_fit_merge" value="true" />
+	<param name="fit_merge_threshold" value="0.05" />
+
+        <param name="publish_table_marker" value="true" />
+        <param name="publish_cluster_markers" value="true" />
+        <param name="publish_good_fit_markers" value="true" />
+        <param name="publish_bad_fit_markers" value="false" />
+        <param name="publish_grasp_point_markers" value="false" />
+
+        <remap from="cloud_old_in" to="narrow_stereo_textured/points" />
+        <remap from="cloud_new_in" to="narrow_stereo_textured/points2" />
+
+        <remap from="markers_out" to="billiard_detector_markers" />
+        <remap from="model_pose_out" to="billiard_detector_models" />
+    </node>
+    <node name="billiard_object_dynparam" pkg="dynamic_reconfigure" type="dynparam" args="set /camera_synchronizer_node &quot;{ 'projector_mode': 2, 'narrow_stereo_trig_mode': 5 }&quot;" />
+</launch>
+

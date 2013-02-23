@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards
+END
+rosdep.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/rosdep.yaml
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/Makefile
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/CMakeLists.txt
+END
+stack.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/wg-ros-pkg/!svn/ver/53311/graveyard/billiards/stack.xml
+END

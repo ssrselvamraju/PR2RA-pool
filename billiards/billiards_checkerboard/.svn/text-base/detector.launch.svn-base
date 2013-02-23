@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find pr2_machine)/pr2.machine" />
+  <node name="checkerboard_pose_server" pkg="checkerboard_pose" type="cb_detector.py" output="screen" machine="c2">
+    <remap from="image_stream" to="/narrow_stereo/right/image_rect"/>
+    <remap from="camera_info" to="/narrow_stereo/right/camera_info"/>
+    <param name="corners_x" value="5"/>
+    <param name="corners_y" value="3"/>
+    <param name="spacing_x" value="0.022"/>
+    <param name="spacing_y" value="0.022"/>
+    <param name="publish_period" value="0.5"/>
+  </node>
+  <node pkg="billiards_checkerboard" type="localize_checkerboard.py" name="localize_checkerboard"/>
+</launch>
